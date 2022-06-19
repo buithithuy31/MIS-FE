@@ -40,14 +40,20 @@ class Content extends Component {
                             <div className="btn btn-group">
                             <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
                             <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                            <div className="btn btn-success" onClick= {() =>this.thongbao3("Thông báo")}>TB3</div>
-                            <div className="btn btn-danger" onClick= {this.thongbao3.bind(this,"Thông báo 4")}>TB4</div>
+                            {/* <div className="btn btn-success" onClick= {() =>this.thongbao3("Thông báo")}>TB3</div>
+                            <div className="btn btn-danger" onClick= {this.thongbao3.bind(this,"Thông báo 4")}>TB4</div> */}
                             </div>
                         </div>
                         <hr />
-                
+                        <div className='row'>
+                        <div className="form-group">
+                            <input type="text" name="ten" className="form-control" />
+                            <div className="btn btn-block btn-danger">Save</div>
+                        </div>
+
+                        </div>
                     </div>
-                </div> 
+                </div>  
                 </div>
                 </div>
             {/* </section> */}
