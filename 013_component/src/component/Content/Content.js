@@ -4,12 +4,36 @@ import React, { Component } from 'react';
 class Content extends Component {
         constructor(props) {
             super(props);
-        this.state={isOn: true}
+        this.state={trangThai: 0}
         }
 
     thongbao = () => { alert('Cách xử lí tương tác trong react js');}
     thongbao2 = () => { alert('Thông báo số 2');}
     thongbao3 = (x) => { alert(x);}
+
+    renderButton = () =>  (
+            <div className="row">
+            <div className="btn btn-group">
+            <div className="btn btn-info">Edit</div>
+            <div className="btn btn-warning">Remove</div>
+            </div>
+        </div>
+        )
+        
+    
+    renderForm = () => {
+        <div className='row'>
+            <div className="form-group">
+                <input type="text" name="ten" className="form-control" />
+                <div className="btn btn-block btn-danger">Save</div>
+            </div>
+        </div>
+    }
+    displayCheck = () => {
+        if(this.state.trangthai === 0){
+            return this.renderButton();
+        }
+    }
     render() {
         return (
             <>
@@ -36,22 +60,24 @@ class Content extends Component {
                         {this.props.trichdan}
                         </p>
                         
-                        <div className="row">
+                        {this.displayCheck()}
+
+                        {/* <div className="row">
                             <div className="btn btn-group">
                             <div className="btn btn-info" onClick={this.thongbao}>Edit</div>
                             <div className="btn btn-warning" onClick={this.thongbao2}>Remove</div>
-                            {/* <div className="btn btn-success" onClick= {() =>this.thongbao3("Thông báo")}>TB3</div>
-                            <div className="btn btn-danger" onClick= {this.thongbao3.bind(this,"Thông báo 4")}>TB4</div> */}
+                            <div className="btn btn-success" onClick= {() =>this.thongbao3("Thông báo")}>TB3</div>
+                            <div className="btn btn-danger" onClick= {this.thongbao3.bind(this,"Thông báo 4")}>TB4</div> 
                             </div>
-                        </div>
+                        </div>  */}
+
                         <hr />
-                        <div className='row'>
+                        {/* <div className='row'>
                         <div className="form-group">
                             <input type="text" name="ten" className="form-control" />
                             <div className="btn btn-block btn-danger">Save</div>
                         </div>
-
-                        </div>
+                        </div> */}
                     </div>
                 </div>  
                 </div>
