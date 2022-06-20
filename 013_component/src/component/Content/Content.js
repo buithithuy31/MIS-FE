@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Content extends Component {
         constructor(props) {
             super(props);
-        this.state={trangThai: 1}
+        this.state={trangThai: 0}
         }
 
     thongbao = () => { alert('Cách xử lí tương tác trong react js');}
@@ -14,7 +14,7 @@ class Content extends Component {
     renderButton = () =>  (
             <div className="row">
             <div className="btn btn-group">
-            <div className="btn btn-info">Edit</div>
+            <div className="btn btn-info" onClick={() => this.editClick()}>Edit</div>
             <div className="btn btn-warning">Remove</div>
             </div>
         </div>
@@ -24,8 +24,12 @@ class Content extends Component {
     renderForm = () => (
         <div className='row'>
             <div className="form-group">
-                <input type="text" name="ten" className="form-control" />
-                <div className="btn btn-block btn-danger">Save</div>
+                <input defaultValue={this.props.tieude} type="text" name="ten" className="form-control" />
+            
+            </div>
+
+            <div className="form-group">
+                <div className="btn btn-block btn-danger" onClick={() => this.saveClick()} >Save</div>
             </div>
         </div>
     )
@@ -37,6 +41,13 @@ class Content extends Component {
             return this.renderForm();
         }
     }
+    editClick =() => {
+        this.setState({trangThai:1});
+    }
+    saveClick =() => {
+        this.setState({trangThai:0});
+    }
+
     render() {
         return (
             <>
