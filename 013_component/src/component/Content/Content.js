@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Content extends Component {
         constructor(props) {
             super(props);
-        this.state={trangThai: 0}
+        this.state={trangThai: 1}
         }
 
     thongbao = () => { alert('Cách xử lí tương tác trong react js');}
@@ -21,17 +21,20 @@ class Content extends Component {
         )
         
     
-    renderForm = () => {
+    renderForm = () => (
         <div className='row'>
             <div className="form-group">
                 <input type="text" name="ten" className="form-control" />
                 <div className="btn btn-block btn-danger">Save</div>
             </div>
         </div>
-    }
+    )
     displayCheck = () => {
-        if(this.state.trangthai === 0){
+        if(this.state.trangThai === 0){
             return this.renderButton();
+        }
+        else {
+            return this.renderForm();
         }
     }
     render() {
