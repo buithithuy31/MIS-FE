@@ -33,14 +33,14 @@ class App extends Component {
   
   capnhatState = () => {
     this.setState({
-      trangthai:"Trang thai duoc Update"
+      trangthai:"CapNhat1",
+      trangthai2:"CapNhat2"
     });
   }
     
   
   render() {
   
-    console.log("in ra man hinh");
     console.log(this.state.trangthai);
     return (
       <div className="App">
