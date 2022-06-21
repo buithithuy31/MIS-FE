@@ -668,7 +668,9 @@ progress {
     max-width: 1320px;
   }
 }
-
+.jumbotron{
+  background-color: #fff;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -11429,7 +11431,7 @@ html {
 
 .callout {
   padding: 15rem 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("img/bg-callout.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("http://media.dulich24.com.vn/diemden/thanh-pho-quy-nhon-3290/quy-nhon.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11486,10 +11488,11 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("https://s1storage.2banh.vn/image/2014/11/nhung-hinh-anh-dep-khi-di-phuot-tai-quy-nhon-5502-1415090775-545892576cfcc.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* url("img/bg-masthead.jpg"); */
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
